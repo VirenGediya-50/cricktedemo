@@ -7,10 +7,10 @@ export class Home extends Component {
 
 
     render() {
-        const { getCrickteScore } = this.props;
+        const {  getCrickteScore } = this.props;
+    
         return (
             <div >
-                
                 <MatchButton 
                     title={"Button 1"}
                     onClick ={() =>getCrickteScore()}
@@ -21,11 +21,9 @@ export class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log('====================================');
-    console.log(state);
-    console.log('====================================');   
+    const { cricketScore, kabaddiScore } = state.scoreReducer;   
     return {
-    
+        cricketScore, kabaddiScore
     }
 }
 
